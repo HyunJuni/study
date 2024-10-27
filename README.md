@@ -1,2 +1,2 @@
 # study
-공부
+Study 폴더
