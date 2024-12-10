@@ -1,1 +1,4 @@
-# 1. KafKa의 개념ㅁㄴㅇㄻㄴㅇㄹㄴㅇㅁㄹㄴㅁ
+# 1. KafKa의 개념
+
+Producer > Kafka Cluster > Consumer
+
