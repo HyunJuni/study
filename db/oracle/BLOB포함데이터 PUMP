@@ -1,0 +1,7 @@
+먼저 SQL DEVELOPER 에서 별도의 파일로 EXPORT 진행
+SFTP로 Linux에 EXPORT 한 파일 올림
+SSH 접속으로 Linux에 접근해서 명령어 실행
+  - sqlldr userid=id/pw control=export한 파일.ctl
+  - ex) sqlldr userid=gjits/gjits2025 control=TCM_BOARD_FILE_BAK_DATA_TABLE.ctl
+
+※ 테이블이 미리 생성되어있어야함
