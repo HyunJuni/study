@@ -1,0 +1,37 @@
+<이클립스에서 maven profile 설정>
+1. pom.xml 추가
+  <profiles>
+  	<profile>
+  		<id>product</id>
+  		<properties>
+			<env>product</env>
+  		</properties>
+  		<activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+  	</profile>
+  	<profile>
+  		<id>dev</id>
+  		<properties>
+			<env>dev</env>
+  		</properties>
+  	</profile>
+  </profiles>
+
+  <bulid>
+    <resources>
+		<resource>
+			<directory>${basedir}/src/main/resources</directory>
+		</resource>
+		<resource>
+			<directory>${basedir}/src/main/resources-${env}</directory>
+		</resource>
+	</resources>
+  </bulid>
+
+2. 프로젝트 우클릭 > Run As > Run Configurations > Maven Bulid 
+    Base directory : 추가할 Workspace 선택
+    Goals : clean package
+    Profiles : 위에서 사용할 proflie 넣기
+    Run 선택
+    
